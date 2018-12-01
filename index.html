@@ -1,0 +1,43 @@
+<html>
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=Play|Titillium+Web" rel="stylesheet">
+
+    <style type="text/css">
+
+        h1 {font-family: 'Play', sans-serif; text-align: left; text-shadow: 0px 0px 5px #767676;}
+        canvas {border:2px solid #000000;}
+        
+        label 
+        .displaynone { display: none !important; }
+      
+    </style>
+</head>
+    
+<body>
+
+    <div id="divTech"></div>
+        <button onclick="testFunction()">testFunction</button>
+        <button onclick="betaFunction()">betaFunction</button>
+        <br>
+        <textarea id="txOutput" rows="50" cols="150"> </textarea>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    function testFunction() {
+
+        alert('hello world')
+
+    }
+
+    function betaFunction() {
+
+        document.getElementById('txOutput').value = ('hello world')
+
+    }
+
+</script>
