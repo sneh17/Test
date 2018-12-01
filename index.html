@@ -46,16 +46,21 @@
 
     document.title = "Sneh Wallet 0.18"
 
-    document.getElementById('txOutput').value += 'Finding connection..'
+    document.getElementById('txOutput').value += 'Finding connection..\n'
 
     var api = new ripple.RippleAPI({server:'wss://s2.ripple.com/'});
 
-    document.getElementById('txOutput').value += 'API SET..'
+    document.getElementById('txOutput').value += 'API SET..\n'
 
     api.connect().then(function() { 
 
         document.getElementById('txOutput').value += 'Connected to Ripplenet..'
-        alert('Connected to Ripplenet') 
+
+        api.getAccountInfo({address:'rsnehREMfBbhsiTjygVwrPu4vjF3Qr31wN'}).then(data => {
+
+            document.getElementById('txOutput').value += 'Balance = ' + data.xrpBalance
+
+        })
 
     })
 
