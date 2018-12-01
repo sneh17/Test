@@ -44,4 +44,14 @@
 
     }
 
+var api = new ripple.RippleAPI({server:'wss://s2.ripple.com/'});
+    api.connect().then(function() { 
+
+        LoadStatus.Connected = true;
+        alert('Connected to Ripplenet') 
+
+    })
+
+
+
 </script>
